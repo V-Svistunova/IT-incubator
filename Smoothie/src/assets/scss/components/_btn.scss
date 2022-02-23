@@ -1,0 +1,52 @@
+
+.btn {
+  @include flex--a-j-d (center, space-between);
+  width: 100%;
+  height: 100vmax;
+  padding: 0 38px;
+  font-family: 'MuliExtraBold', sans-serif;
+  color: $main-color;
+  outline: none;
+  border-style: none;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  
+  &:focus {
+    outline: 1px solid rgb(12, 12, 12);
+  }
+  
+  &:hover {
+    opacity: 0.7;
+    border: 1px double black;  
+    color: #1e1e1e;
+    outline: none;    
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.9;
+    border: 2px inset white;
+    color: black;
+    outline: none;
+  }
+
+  &--green {
+    background-color: $secondary;
+  }
+
+  &--transparent-bg {
+    background-color: transparent;
+  }
+}
+
+
+
+
+
+
+
+
+

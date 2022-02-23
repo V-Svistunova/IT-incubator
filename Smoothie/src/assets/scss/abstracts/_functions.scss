@@ -1,0 +1,22 @@
+
+
+@each $bgItem in dark, lemon, turmeric, vegan {
+  .products__block-#{$bgItem} {
+    display: block;
+    width: 100%;
+    background-image: url("../images/produckt__#{$bgItem}-smoothies.png");
+    background-position: center 12rem;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media (max-width: 1200px) {
+      background-position: center 8rem;
+    }
+
+    @media (max-width: 568px) {      
+      background-position: center 4rem;
+      background-size: 35%;
+    }
+  }
+}
+

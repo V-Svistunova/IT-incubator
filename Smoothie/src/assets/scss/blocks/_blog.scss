@@ -1,0 +1,130 @@
+
+.blog {
+  $blog: &;
+
+  
+  @include flex--a-j-d (center, center);
+  max-height: 800px;
+  padding: 100px 0 200px 0;
+  @media (max-width: 1540px) {
+    @include flex--a-j-d (center, center, column);
+    padding: 0 10px 60px 10px;
+    max-height: max-content;
+  }
+  
+  &__block {
+    height: 100%;
+    max-height: 800px;
+    
+    @media (max-width: 1540px) {
+      @include flex--a-j-d (center, center, column);
+    }
+
+    #{$blog}__title {
+      line-height: 0.8;
+      letter-spacing: -1px;
+    }
+
+    #{$blog}__img {
+
+      @media (max-width: 1540px) {
+        width: 90%;
+      }
+      @media (max-width: 1024px) {
+        width: 80%;
+      }
+      @media (max-width: 568px) {
+        width: 70%;
+      }
+    }
+  }
+
+  &__content {
+    $blog__content: &;
+
+    width: 100%;
+    max-width: 690px;
+    
+    @media (max-width: 1540px) {
+      @include flex--a-j-d (center, center, column);
+    } 
+  
+    &-title {
+      position: relative;
+      margin: 200px 0 0 60px;
+      font-size: 3.0rem;
+      line-height: 1.33;
+      letter-spacing: -0.6px;
+      @media (max-width: 1540px) {
+        margin: 30px 10px 0 10px;
+      }
+      @media (max-width: 568px) {
+        text-align: center;
+      }
+
+      &::before {
+        @extend %pseudo-element;
+        width: 630px;
+        height: 12px;
+        background-color: $primary;
+        top: -50px;
+        left: -62px;
+        border-radius: 0 6px 6px 0;
+        -webkit-border-radius: 0 6px 6px 0;
+        -moz-border-radius: 0 6px 6px 0;
+        -ms-border-radius: 0 6px 6px 0;
+        -o-border-radius: 0 6px 6px 0;
+        @media (max-width: 1540px) {
+          display: none;
+        }
+      }
+    }
+
+    &-data {
+      margin-left: 60px;
+      font-size: 1.6rem;
+      line-height: 2.19;
+      color: #1e1e1e;
+      @media (max-width: 1540px) {
+        margin-left: 0; 
+      }
+    }
+
+    &-text {
+      margin-left: 120px;
+      max-width: 470px;
+      font-size: 1.8rem;
+      line-height: 1.94;
+      @media (max-width: 1540px) {
+        margin-left: 0;
+        text-align: center;
+      }      
+      @media (max-width: 1200px) {
+        max-width: 430px;
+      }
+      @media (max-width: 568px) {
+        max-width: 370px;
+        width: 100vw;
+        margin: 0 10px;
+      }
+
+      #{$blog__content}-btn {
+        max-width: 16rem;
+        max-height: 3rem;
+        display:inline;
+        position: relative;
+        font-family: 'Muli-BoldItalic';
+        font-weight: 800;
+        color: black;
+        padding-left: 0;
+  
+        &::after {
+          @extend %btn-arrow--after;
+          width: 30px;
+          height: 12px;
+          background-image:url(../../assets/images/Arrow-orange.png);
+        }
+      }
+    }
+  }  
+}  

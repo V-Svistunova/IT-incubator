@@ -1,0 +1,91 @@
+
+.products {
+  
+  max-height: 720px;
+  display: flex;
+
+  @media (max-width: 1200px) {
+    overflow-x: scroll;
+    height: 100%;
+  }
+
+  &__block {
+    @include flex--a-j-d (center, flex-start, column);
+    flex-grow: 1;
+    padding-top: 43rem;
+    padding-bottom: 8rem;
+    
+    &:hover {
+      animation: shake 2.5s 1s 2 alternate;
+      -webkit-animation: shake 2.5s 2s 2 alternate;
+}
+
+    @media (max-width: 1200px) {
+      min-width: 250px;
+    }
+
+    @media (max-width: 568px) {      
+      padding-top: 36rem;
+      padding-bottom: 4rem;
+    }
+
+    &--brown {
+      background-color: #632b17;
+    }
+  
+    &--dark-green {
+      background-color: #178670;
+    }
+  
+    &--yellow {
+      background-color: $primary;
+    }
+  
+    &--orange {
+      background-color: #c3471b;
+    }
+  }
+    
+  &__title {
+    font-family: 'Muli-Bold';
+    font-size: 2.4rem;
+    line-height: 0.92;
+    text-align: center;
+
+    @media (max-width: 1200px) {
+      margin: 10px 30px;
+      line-height: 1.2;
+    }
+  }
+  
+  &__volume {
+    font-family: 'Muli-Italic';
+    font-size: 2.1rem;
+    line-height: 1.52;
+    color: $main-color;  
+    margin-bottom: 6rem;
+
+    @media (max-width: 568px) {
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: 368px) {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  &__btn {
+    position: relative;
+    max-width: 20.4rem;
+    max-height: 6rem;
+    text-transform: capitalize;  
+    font-size: 2.1rem;
+    line-height: 1.05;
+    border: solid 2px #ffffff;
+
+    &::after {
+      @extend %btn-arrow--after;      
+      background-image:url(../../assets/images/Arrow-white.png);
+    }
+  } 
+}

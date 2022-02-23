@@ -1,0 +1,30 @@
+@keyframes shake {
+  0% {    
+    background-position-x: 40%;
+  }
+
+  100% {
+    background-position-x: 60%;
+  }
+};
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    top: 15%;
+    transform: rotateX(15deg);
+    -webkit-transform: rotateX(15deg);
+    -moz-transform: rotateX(15deg);
+    -ms-transform: rotateX(15deg);
+    -o-transform: rotateX(15deg);
+  }
+  to {
+    opacity: 1;
+    top: 0;
+    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+  }
+};

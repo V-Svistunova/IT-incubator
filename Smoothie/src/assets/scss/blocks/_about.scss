@@ -1,0 +1,136 @@
+
+.about {
+  @include flex--a-j-d (center); 
+  max-height: 800px;
+  background-color: #14826f;
+  @media (max-width: 1540px) {
+    max-height: max-content;
+    flex-direction: column;
+  }
+
+  &__block {
+    @include flex--a-j-d (flex-start, center); 
+    flex-basis: 50%;
+
+    @media (max-width: 1540px) {
+      margin-bottom: 20px;
+    }
+    
+    &-img {
+      position: relative;
+      top: 75px;
+      transition: 2s;
+      -webkit-transition: 3s;
+
+      
+      &:hover {
+        transform: rotate(-7deg);
+        -webkit-transform: rotate(-7deg);
+        -moz-transform: rotate(-7deg);
+        -ms-transform: rotate(-7deg);
+        -o-transform: rotate(-7deg);
+}
+
+      @media (max-width: 1540px) {
+        width: 70%;
+        top: 0;      
+      }
+      @media (max-width: 768px) {
+        width: 60%;
+      }
+    }
+  }
+  
+  &__content {
+    $about_content: &;
+
+    @include flex--a-j-d (flex-start, left, column);
+    flex-basis: 50%;
+    width: 590px;
+    margin-left: 50px;
+
+    @media (max-width: 1540px) {
+      @include flex--a-j-d (center, center, column);
+      margin-left: 0;
+      margin-bottom: 50px;
+    }     
+    @media (max-width: 568px) {
+      max-width:fit-content;
+    }
+    
+    &-title {
+      position: relative;
+      font-size: $font-size--title * 1.1;
+      max-width: 600px;
+      margin-top: 0;
+      line-height: 1.09;
+      letter-spacing: -1.1px;
+      @media (max-width: 1540px) {
+        text-align: center;
+      }
+      @media (max-width: 768px) {
+        font-size: $font-size--title *1;
+      }    
+      @media (max-width: 568px) {
+        max-width: max-content;
+        font-size: $font-size--title *0.9;
+      }    
+      @media (max-width: 320px) {
+        font-size: $font-size--title *0.8;
+      }     
+      
+      &::after {
+        @extend %pseudo-element;
+        width: 450px;
+        bottom: -35px;
+        left: 70px;
+        background-image:url(../../assets/images/about_line.png);
+
+        @media (max-width: 568px) {
+          display: none;
+        }
+      }
+    }
+
+    &-list {
+      list-style-image: url(../../assets/images/about__marker.png);
+      padding: 0;
+      margin-left: 32px;
+      @media (max-width: 1540px) {
+        @include flex--a-j-d (center, flex-start, column);
+      }
+      @media (max-width: 568px) {
+        padding: 0px 10px;
+      }
+
+      #{$about_content}-item {
+        padding-left: 20px;
+        margin-bottom: 20px;
+        font-size: 2.1rem;
+        line-height: 1.05;
+        color: $main-color;      
+        @media (max-width: 568px) {
+          margin-bottom: 10px;
+        }
+
+        #{$about_content}-text--thin {
+          font-family: 'Muli-Regular';
+        }
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    max-width: 38rem;
+    max-height: 6rem;
+    font-size: 2.1rem;
+    line-height: 1.05;
+    border: solid 2px #f8b231;
+
+    &::after {
+      @extend %btn-arrow--after;      
+      background-image:url(../../assets/images/Arrow-orange.png);
+    }
+  }  
+}

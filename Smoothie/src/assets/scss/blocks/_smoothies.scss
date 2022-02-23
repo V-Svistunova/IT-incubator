@@ -1,0 +1,124 @@
+
+.smoothies {
+  
+  @include flex--a-j-d (center, center, column);
+  max-height: 870px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  @media (max-width: 1200px) {
+    max-height: 1100px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    line-height: 0.8;
+    letter-spacing: -1px;
+  }
+  
+  &__text {
+    max-width: 915px;
+    font-size: 1.8rem;
+    line-height: 1.94;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding: 0 20px;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      line-height: 1.7;
+    }
+
+    @media (max-width: 568px) {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+  } 
+  
+  &__content {
+    @include flex--a-j-d (center, space-around);
+    width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #f6edde;
+
+    @media (max-width: 1200px) {
+      width: 410px;      
+    }
+
+    @media (max-width: 568px) {
+      width: 310px;
+    }
+
+    
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &-title {
+
+      @media (max-width: 1200px) {
+        margin: 10px 0;
+      }
+
+      @media (max-width: 320px) {
+        font-size: 1.5rem;
+      }
+    }    
+
+    &-item {
+      @include flex--a-j-d (center, center, column);
+      width: 270px;
+      height: 200px;
+      border-right: 2px solid #f6edde;
+      
+      @media (max-width: 1200px) {
+        width: 200px;
+        height: 160px;
+
+        &:first-child {
+          border-bottom: 2px solid #f6edde;
+        }
+        &:nth-child(2) {
+          border-bottom: 2px solid #f6edde;
+        }
+      }
+
+      @media (max-width: 568px) {
+        width: 153px;
+        height: 120px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }      
+  
+      &:nth-child(even) {
+
+        @media (max-width: 1200px) {
+          border-right: none
+        }
+      }
+      
+    }
+
+    &-img {
+      display: block;
+      max-width: 80px;
+      margin: 0 auto;
+    }
+
+    &-title {
+      font-size: 2.5rem;
+      line-height: 1.6;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+  }  
+}
+

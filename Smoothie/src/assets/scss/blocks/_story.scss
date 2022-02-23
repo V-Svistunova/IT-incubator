@@ -1,0 +1,112 @@
+
+.story {  
+  @include flex--a-j-d (center, space-evenly);
+  max-height: 880px;
+  max-width: 1920px;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 160px;
+
+  @media (max-width: 1540px) {
+    padding: 9rem 1rem 12rem 1rem;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    padding: 4.5rem 1rem 6rem 1rem;
+  }
+
+  &__title {
+    line-height: 0.8;
+    letter-spacing: -1px;
+  }
+  
+  &__text {
+    max-width: 510px;
+    font-size: 1.8rem;
+    line-height: 1.94;
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
+
+    @media (max-width: 568px) {
+      padding: 0 20px;
+    }
+  }
+  
+  &__btn {
+    position: relative;
+    max-width: 30rem;
+    max-height: 6rem;
+    margin: 6rem 0;
+    font-size: 2.1rem;
+    line-height: 1.05;
+
+    @media (max-width: 1200px) {
+      margin: 6rem auto;
+    }
+
+    &::after {
+      @extend %btn-arrow--after;      
+      background-image:url(../../assets/images/Arrow-orange.png);
+    }
+  }
+  
+  &__container {
+    position: relative;
+    text-align: right;
+
+    @media (max-width: 1540px) {
+
+    }
+
+    @media (max-width: 1200px) {
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    &::before {
+      @extend %pseudo-element;      
+      width: 290px;
+      height: 220px;
+      top: 3%;
+      left: -35%;
+      background-image:url(../../assets/images/story__img-text.png);
+
+      @media (max-width: 1540px) {
+        top: -70px;
+      }
+
+      @media (max-width: 1200px) {
+        background-size: 80%;
+        left: -15%;
+      }
+
+      @media (max-width: 768px) {
+        background-size: 70%;
+        left: -5%;
+      }
+
+      @media (max-width: 568px) {
+        display: none;
+      }
+    }
+
+    .story__img {
+
+      @media (max-width: 1540px) {
+        width: 90%;
+      }
+
+      @media (max-width: 1200px) {
+        width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        width: 60%;
+      }
+    }    
+  }  
+}
+

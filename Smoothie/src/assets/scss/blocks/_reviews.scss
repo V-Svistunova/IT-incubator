@@ -1,0 +1,175 @@
+
+.reviews {
+  
+  @include flex--a-j-d (center, space-around, column);
+  max-width: 1950px;
+  max-height: 770px;  
+  position: relative;
+  padding: 80px 0;
+  margin: 0 auto;
+  background: #672f1b url(../../assets/images/reviews_sarah-a.png) no-repeat;  
+  background-position: 38% 45%;
+
+  @media (max-width: 1200px) {
+    padding-top: 0;
+  }
+
+  @media (max-width: 768px) {
+    background-size: 80%;
+    background-position: 50% 61%;
+    padding-bottom: 50px;
+    max-height: max-content;
+  }
+
+  @media (max-width: 568px) {
+    background-size: 80%;
+    background-position: 50% 50%;
+  }
+
+  &::before {
+    @extend %pseudo-element;
+    width: 410px;
+    height: 300px;
+    top: -85px;
+    right: 60px;
+    background-image:url(../../assets/images/reviews_dots.png);
+
+    @media (max-width: 1540px) {
+      display: none;
+    }
+  }
+  
+  &__title {
+    line-height: 1;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+
+  &__slider {
+    width: 725px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      width: 475px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 568px) {
+      width: 315px;
+    }
+  }
+
+  &__line {
+    width: max-content;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+  }
+  
+  &__block {
+    @include flex--a-j-d (center, center);    
+    text-align: center;
+
+    @media (max-width: 768px) {
+      @include flex--a-j-d (center, center, column-reverse);
+      padding-right: 250px;
+    }
+
+    @media (max-width: 568px) {
+      max-width: 300px;
+      padding-right: 425px;
+    }
+  
+    &-content {
+      @include flex--a-j-d (flex-start, flex-start, column);
+      max-width: 455px;  
+      margin-right: 50px;
+
+      @media (max-width: 1024px) {
+        margin: 50px 10px;
+      }
+    }
+
+    &-text {
+      font-size: 1.8rem;
+      line-height: 1.94;
+      color: $main-color;
+    }
+
+    &-cite {  
+      color: $primary;
+      font-size: 1.8rem;
+      font-family: 'Muli-BoldItalic';
+      line-height: 2.5;
+      margin: 0 auto;
+    }
+
+    &-avatar {
+      width: 220px;
+      height: 218px;
+      background-size: contain;
+      border-radius: 110px;
+      -webkit-border-radius: 110px;
+      -moz-border-radius: 110px;
+      -ms-border-radius: 110px;
+      -o-border-radius: 110px;
+    }
+  }
+
+  &__user-1 {
+    background: url("./../images/reviews__user-1.png") no-repeat center;
+  }
+
+  &__user-2 {
+    background: url("./../images/reviews__user-2.png") no-repeat center;
+  }
+
+  &__user-3 {
+    background: url("./../images/reviews__user-3.png") no-repeat center;
+  }
+
+  &__user-4 {
+    background: url("./../images/reviews__user-4.png") no-repeat center;
+    background-size: contain;
+  }
+  
+  &__arrow {
+    @include flex--a-j-d (flex-start, space-between);
+    width: 100%;
+    max-width: 24rem;
+  
+    &-left{
+      max-width: 11rem;
+      max-height: 3rem;
+      background-color: transparent;
+      background: url("./../images/reviews_arrow-left.png") no-repeat center;
+    }
+
+    &-right {
+      max-width: 11rem;
+      max-height: 3rem;
+      background-color: transparent;
+      background: url("./../images/Arrow-orange.png") no-repeat center;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
+
+
+
+
+

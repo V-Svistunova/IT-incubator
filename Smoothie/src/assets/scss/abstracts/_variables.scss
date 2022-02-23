@@ -1,0 +1,38 @@
+$primary: #f7ae3b;
+$secondary: #0aa566;
+$main-color: #ffffff;
+$secondary-color: #1e1e1e;
+$subtitle-color: #f2612d;
+$border-radius: 35px;
+$font-size--title: 5rem;
+$font-size--subtitle: 5rem;
+
+%btn-arrow--after {
+  position: absolute;      
+  content: ".";
+  width: 30px;  
+  height: 20px;
+  top: 50%;
+  right: 10%;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: translateY(-50%);
+
+  &:hover {
+    transform: translate(10px, -50%);
+  }
+}
+
+%pseudo-element {
+  content: ".";
+  position: absolute;
+  color:transparent;  
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+%width_height--100 {
+  width: 100vw;
+  height: 100%;
+}

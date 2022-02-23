@@ -1,0 +1,18 @@
+
+
+.input {
+
+  &:focus {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(247, 236, 164);
+  }
+}
+
+
+

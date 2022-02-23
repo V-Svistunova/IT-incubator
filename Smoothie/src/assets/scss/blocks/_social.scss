@@ -1,0 +1,35 @@
+
+.social {
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__icon {
+    display: block;
+    margin: 8px auto;
+  }
+
+  &:visited {
+    box-shadow: 1px 1px 2px black;
+  }
+  
+  &:focus {
+    outline: 2px solid rgb(54, 54, 54);
+  }
+  
+  &:hover {
+    opacity: 0.6;
+  }
+  
+  &:active {
+    opacity: 1;
+    border: 1px inset black;
+  }
+}
+
+
+
+
